@@ -3,9 +3,9 @@
 #include <stdio.h>
 
 /**
- *main - Checks last digit
+ * main - Checks last digit
  *
- *Return: zero
+ * Return: zero
  */
 int main(void)
 {
