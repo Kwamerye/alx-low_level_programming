@@ -1,17 +1,24 @@
 #include <stdio.h>
 
 /**
- *main - Prints numbers between 0 to 9 with commas and spaces.
+ * main - Prints numbers between 0 to 9 with commas and spaces.
  *
- *Return: Always 0 (Success)
+ * Description: Using the main function
+ * this program prints "0, 1, 2, 3, 4, 5, 6, 7, 8, 9"
+ * Return: 0
  */
 int main(void)
 {
 	int i;
-	if (i != 57)
+
+	for (i = 48; i <= 57; i++)
 	{
-		putchar(',');
-		putchar(' ');
+		putchar(i);
+		if (i != 57)
+		{
+			putchar(',');
+			putchar(' ');
+		}
 	}
 	putchar('\n');
 	return (0);
