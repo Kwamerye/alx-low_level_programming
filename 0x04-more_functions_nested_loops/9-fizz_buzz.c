@@ -13,9 +13,9 @@ int main(void)
 {
 	int num = 1;
 
-	while (num < 100, num++)
+	while (num++ < 100)
 	{
-		if((num % 3 == 0) && (num % 5 == 0))
+		if ((num % 3 == 0) && (num % 5 == 0))
 		{
 			printf("FizzBuzz ");
 		}
@@ -36,10 +36,10 @@ int main(void)
 		}
 		else
 		{
-			printf("%d i", num);
+			printf("%d ", num);
 		}
 	}
 	printf("\n");
 
-	return (0)
+	return (0);
 }
