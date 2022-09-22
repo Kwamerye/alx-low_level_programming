@@ -7,7 +7,7 @@
  * @src: copy from
  * @n: input char
  *
- * Return: 0
+ * Return: Always 0 (success)
  */
 
 char *_strncpy(char *dest, char *src, int n)
