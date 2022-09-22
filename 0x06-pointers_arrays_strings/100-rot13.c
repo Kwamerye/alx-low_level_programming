@@ -2,32 +2,34 @@
 #include <stdio.h>
 
 /**
- * rot13 - ...
- * @s: ...
+ * rot13 - Entry point
+ * ONE if, TWO loops only...
+ * @n: input
  *
- * Return: ...
+ * Return: decrypted string
  */
 
-char *rot13(char *s)
+char *rot13(char *n)
 {
-	int a = 0;
+	int x, rot_c = 13, i = 0;
+	char toswap[] = {'A', 'N', 'a', 'n', 'B', 'O', 'b', 'o', 'C', 'P',
+		'c', 'p', 'D', 'Q', 'd', 'q', 'E', 'R', 'e', 'r', 'F', 'S', 'f',
+		's', 'G', 'T', 'g', 't', 'H', 'U', 'h', 'u', 'I', 'V', 'i', 'v',
+		'J', 'W', 'j', 'w', 'K', 'X', 'k', 'x', 'L', 'Y', 'l', 'y', 'M',
+		'Z', 'm', 'z'};
 
-	while (s[a])
+	while (n[i] != '\0')
 	{
-		while ((s[a] >= 'a' && s[a] <= 'z') || (s[a] >= 'A' && s[a] <= 'Z'))
+		for (x = 0; x <= 51; x++)
 		{
-			if ((s[a] > 'm' && s[a] <= 'z') || (s[a] > 'M' && s[a] <= 'Z'))
+			if (n[i] == toswap[x])
 			{
-				s[a] -= 13;
-				break;
+				n[i] = n[i] + rot_c;
+				x = 51;
 			}
-
-			s[a] += 13;
-			break;
+			rot_c = rot_c * -1;
 		}
-
-		a++;
+		i++;
 	}
-
-	return (s);
+	return (n);
 }
