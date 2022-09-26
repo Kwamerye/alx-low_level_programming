@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _memeset - fills a memory block with a constant byte
+ * _memset - fills a memory block with a constant byte
  * @s: pointed destination
  * @b: constant byte
  * @n: number of bytes
@@ -12,7 +12,7 @@
 char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int i;
-	
+
 	for (i = 0; i < n; i++)
 		s[i] = b;
 	return (s);
