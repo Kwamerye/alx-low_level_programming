@@ -1,8 +1,7 @@
 #include "main.h"
-#include <stdio>
 
 /**
- * _memeset() - Function that fills a memory block with a constant byte
+ * _memeset - fills a memory block with a constant byte
  * @s: address to memory block
  * @b: char to be used
  * @n: number of bytes to be used
