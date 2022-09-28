@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-int is_prime(int n, int start)
 
 /**
  * is_prime_number - return the 1 of n is prime
