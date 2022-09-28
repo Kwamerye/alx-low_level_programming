@@ -6,7 +6,7 @@ int squareroot(int n, int i);
  * _sqrt_recursion - no loop, 1. 2nd function - checks for perfect square
  * @n: Input
  *
- * Return: Always 0
+ * Return: the square root of n
  */
 
 int _sqrt_recursion(int n)
