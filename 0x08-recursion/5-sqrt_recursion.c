@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+int squareroot(int n, int i);
 
 /**
  * _sqrt_recursion - no loop, 1. 2nd function - checks for perfect square
@@ -10,23 +11,23 @@
 
 int _sqrt_recursion(int n)
 {
-	if (n == 1 || n == 0)
-		return (n);
-	return (_sqrt(0, n));
+	if (n < 0)
+		return (-1);
+	return (squareroot(n, (n + 1) / 2));
 }
 /**
- * _sqrt - checks if perfect sqaure
+ * squareroot - checks if perfect square
  * @n: Input
- * @i: squared number
+ * @i: counter
  *
  * Return: the square root of n
  */
 
-int _sqrt(int n, int i)
+int squareroot(int n, int i)
 {
-	if (n > i / 2)
+	if (i < 1)
 		return (-1);
-	else if (n * n == i)
-		return (n);
-	return (_sqrt(n + i, i));
+	else if (i * i == n)
+		return (i);
+	return (squareroot(n, i - 1));
 }
