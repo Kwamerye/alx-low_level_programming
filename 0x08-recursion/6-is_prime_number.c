@@ -1,8 +1,9 @@
 #include "main.h"
 #include <stdio.h>
+int is_prime(int n, int start)
 
 /**
- * is_prime_number - executes prime_checker
+ * is_prime_number - return the 1 of n is prime
  * @n: Input to check
  *
  * Return: Always 0
@@ -10,26 +11,27 @@
 
 int is_prime_number(int n)
 {
+	int start = n / 2;
+
 	if (n <= 1)
 		return (0);
-	else if (prime_checker(n, n / 2) > 0)
-		return (1);
-	return (0);
+	return (is_prime(n, start));
 }
 
 /**
- * prime_checker - checks for prime
+ * is_prime - return the number 1 if n is prime
  * @n: Input to check
- * @i: n / 2, then passes to i - 1, checks if greater than 0
+ * @start: number to start checkingfrom
  *
- * Return: prime check
+ * Return: 1 if n is prime, 0 if otherwise
  */
-int prime_checker(int n, int i)
+
+int is_prime(int n, int start)
 {
-	if (i == 1)
+	if (start <= 1)
 		return (1);
-	if (n % i == 0)
+	else if (n % start == 0)
 		return (0);
 	else
-		return (prime_checker(n, i - 1));
+		return (_is_prime(n, start - 1));
 }
