@@ -9,28 +9,25 @@
  * @argc: The number of arguments passed to the program.
  * @argv: An array of pointers to the arguments.
  *
- * Return: 1 if one of the numbers contains symbols that are non-digits,
- *         Otherwise 0
+ * Return: 0
  */
 
 int main(int argc, char *argv[])
 {
-	int num, digit, sum = 0;
+	int i, sum = 0;
 
-	for (num = 1; num < argc; num++)
+	if (argc < 1)
+		return (0);
+
+	for (i = 1; i < argc; i++)
 	{
-		for (digit = 0; argv[num][digit]; digit++)
+		if (!atoi(argv[i]))
 		{
-			if (argv[num][digit] < '0' || argv[num][digit] > '9')
-			{
-				printf("Error\n");
-				return (1);
-			}
+			printf("%s\n", "Error");
+			return (1);
 		}
-
-		sum += atoi(argv[num]);
+		sum += atoi(argv[i]);
 	}
-
 	printf("%d\n", sum);
 
 	return (0);
