@@ -4,7 +4,7 @@
 /**
  * main - Prints all th arguements it receives.
  * @argc: The number of arguements supplied to the program.
- * @srgv: An array of pointers to the arguemnets.
+ * @argv: An array of pointers to the arguemnets.
  *
  * Return: Always 0.
  */
