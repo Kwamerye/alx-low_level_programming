@@ -10,23 +10,34 @@
 
 char *_strdup(char *str)
 {
-	int i, end;
-	char *array;
+	char *nstr;
+	unsigned int len, i;
 
+	/* check if str is null */
 	if (str == NULL)
-		return (NULL);
-
-	for (end = 0; end <= *str; end++)
 	{
+		return (NULL);
 	}
 
-	end += 1;
-	array = malloc(sizeof(char) * end);
+	len = 0;
+	while (str[len] != '\0')
+	{
+		len++;
+	}
 
-	for (i = 0; i < end; i++)
-		array[i] = str[i];
+	nstr = malloc(sizeof(char) * (len + 1));
 
-	if (array == NULL)
+	/* check if malloc was successful */
+	if (nstr == NULL)
+	{
 		return (NULL);
-	return (array);
+	}
+
+	for (i = 0; i < len; i++)
+	{
+		nstr[i] = str[i];
+	}
+	nstr[len] = '\0';
+	return (nstr);
+
 }
