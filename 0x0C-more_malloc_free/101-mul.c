@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+int _putchar(char c);
 int find_len(char *str);
 char *create_xarray(int size);
 char *iterate_zeroes(char *str);
