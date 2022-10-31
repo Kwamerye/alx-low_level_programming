@@ -6,6 +6,7 @@
  *               of a listint_t list.
  * @head: A pointer to the address of the
  *        head of the listint_t list.
+ * @n: integer to add to the list
  *
  * Return: address of new node
  */
